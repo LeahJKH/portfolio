@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gray;
+  padding: 10px;
+}
+#screen {
+  background-image: url("/images/hillsite.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 580px;
+  display: flex;
+}
+#btm-navbar {
+  background-color: #245edc;
+  align-self: end;
+  width: 100%;
+  height: 5%;
+  display: flex;
+}
+#startbtn {
+  background-color: #1dc824;
+  width: 11%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+}
+#end-menu {
+  background-color: #1186e3;
+  width: 11%;
+  height: 100%;
+  display: flex;
+  margin-left: 80%;
+}
