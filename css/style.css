@@ -17,9 +17,10 @@ body {
 #btm-navbar {
   background-color: #245edc;
   align-self: end;
-  width: 100%;
+  width: 98.5%;
   height: 5%;
   display: flex;
+  position: absolute;
 }
 #startbtn {
   background-color: #1dc824;
@@ -33,4 +34,14 @@ body {
   height: 100%;
   display: flex;
   margin-left: 80%;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.app > p {
+  text-align: center;
 }
