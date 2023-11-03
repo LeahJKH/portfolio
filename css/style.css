@@ -53,3 +53,32 @@ body {
 .app > img {
   cursor: pointer;
 }
+#cv-full {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-color: whitesmoke;
+  border: grey 3px solid;
+  overflow: hidden;
+}
+#cv-full.draggable {
+  cursor: grab;
+  user-select: none;
+  position: absolute;
+}
+
+/*Window classes*/
+.top-menu {
+  padding: 10px;
+  background-color: #1186e3;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.closeX {
+  background-color: red;
+}
+/*Window classes*/
