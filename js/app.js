@@ -1,36 +1,52 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const cv = document.querySelector("#cv-file");
-  const cvPage = document.querySelector("#cv-full");
-  const cvClose = document.querySelector("#close-cv");
-  cv.addEventListener("click", function () {
-    cvPage.style.display = "flex";
-  });
-  cvClose.addEventListener("click", function () {
-    cvPage.style.display = "none";
-  });
+  const cv = {
+    element: document.querySelector("#cv-file"),
+    page: document.querySelector("#cv-full"),
+    close: document.querySelector("#close-cv"),
+    isDragging: false,
+  };
 
-  let offsetX, offsetY;
-  let isDragging = false;
+  const binary = {
+    element: document.querySelector("#binary-file"),
+    page: document.querySelector("#binary-full"),
+    close: document.querySelector("#close-binary"),
+    isDragging: false,
+  };
 
-  cvPage.addEventListener("mousedown", function (e) {
-    isDragging = true;
-    offsetX = e.clientX - cvPage.getBoundingClientRect().left;
-    offsetY = e.clientY - cvPage.getBoundingClientRect().top;
-
-    document.addEventListener("mousemove", moveElement);
-    document.addEventListener("mouseup", stopDragging);
-  });
-
-  function moveElement(e) {
-    if (isDragging) {
-      cvPage.style.left = e.clientX - offsetX + "px";
-      cvPage.style.top = e.clientY - offsetY + "px";
-    }
+  function handleClick(app) {
+    app.element.addEventListener("click", () => {
+      app.page.style.display = "flex";
+    });
+    app.close.addEventListener("click", () => {
+      app.page.style.display = "none";
+      app.isDragging = false;
+    });
   }
 
-  function stopDragging() {
-    isDragging = false;
-    document.removeEventListener("mousemove", moveElement);
-    document.removeEventListener("mouseup", stopDragging);
+  handleClick(cv);
+  handleClick(binary);
+
+  function handleDrag(app) {
+    app.page.addEventListener("mousedown", (e) => {
+      app.isDragging = true;
+      const offsetX = e.clientX - app.page.getBoundingClientRect().left;
+      const offsetY = e.clientY - app.page.getBoundingClientRect().top;
+
+      document.addEventListener("mousemove", (e) => {
+        if (app.isDragging) {
+          app.page.style.left = e.clientX - offsetX + "px";
+          app.page.style.top = e.clientY - offsetY + "px";
+        }
+      });
+
+      document.addEventListener("mouseup", () => {
+        app.isDragging = false;
+        document.removeEventListener("mousemove", moveElement);
+        document.removeEventListener("mouseup", stopDragging);
+      });
+    });
   }
+
+  handleDrag(cv);
+  handleDrag(binary);
 });

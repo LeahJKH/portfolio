@@ -11,7 +11,7 @@ body {
   background-image: url("/images/hillsite.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 580px;
+  height: 550px;
   display: flex;
 }
 #btm-navbar {
@@ -53,6 +53,7 @@ body {
 .app > img {
   cursor: pointer;
 }
+/* cv classes */
 #cv-full {
   display: none;
   position: absolute;
@@ -67,6 +68,24 @@ body {
   user-select: none;
   position: absolute;
 }
+/* cv classes */
+
+/* binary classes */
+#binary-full {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-color: whitesmoke;
+  border: grey 3px solid;
+  overflow: hidden;
+}
+#binary-full.draggable {
+  cursor: grab;
+  user-select: none;
+  position: absolute;
+}
+/* binary classes */
 
 /*Window classes*/
 .top-menu {
