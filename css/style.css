@@ -71,6 +71,10 @@ body {
   user-select: none;
   position: absolute;
 }
+#cv-photo {
+  width: 150px;
+  height: 250px;
+}
 /* cv classes */
 
 /* binary classes */
@@ -153,3 +157,11 @@ body {
 }
 
 /*Window classes*/
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
