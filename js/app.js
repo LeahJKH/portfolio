@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     isDragging: false,
   };
 
+  const projects = {
+    element: document.querySelector("#projects-file"),
+    page: document.querySelector("#projects-full"),
+    close: document.querySelector("#close-projects"),
+    isDragging: false,
+  };
+
   function handleClick(app) {
     app.element.addEventListener("click", () => {
       app.page.style.display = "flex";
@@ -25,6 +32,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   handleClick(cv);
   handleClick(binary);
+  handleClick(projects);
 
   function handleDrag(app) {
     app.page.addEventListener("mousedown", (e) => {
@@ -49,4 +57,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   handleDrag(cv);
   handleDrag(binary);
+  handleDrag(projects);
 });

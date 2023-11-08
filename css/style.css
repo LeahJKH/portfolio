@@ -76,8 +76,8 @@ body {
 #binary-full {
   display: none;
   position: absolute;
-  width: 400px;
-  height: 300px;
+  width: 330px;
+  height: 310px;
   background-color: whitesmoke;
   border: grey 3px solid;
   overflow: hidden;
@@ -87,7 +87,28 @@ body {
   user-select: none;
   position: absolute;
 }
+#binary-code {
+  padding: 10px;
+  font-size: 14px;
+}
 /* binary classes */
+
+/* binary classes */
+#projects-full {
+  display: none;
+  position: absolute;
+  width: 330px;
+  height: 310px;
+  background-color: whitesmoke;
+  border: grey 3px solid;
+  overflow: hidden;
+}
+#projects-full.draggable {
+  cursor: grab;
+  user-select: none;
+  position: absolute;
+}
+/* projects classes */
 
 /*Window classes*/
 .top-menu {
@@ -99,7 +120,18 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.top-btns-style {
+  width: 25px;
+  height: 25px;
+  border: 2px white solid;
+  background-color: #1186e3;
+  box-shadow: inset rgba(255, 255, 255, 0.343) 4px 4px 10px 2px;
+}
 .closeX {
   background-color: red;
 }
+.closeX:active {
+  background-color: rgb(113, 16, 16);
+}
+
 /*Window classes*/
