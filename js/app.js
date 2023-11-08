@@ -5,7 +5,7 @@ import { projects } from "./module.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   function handleClick(app) {
-    app.element.addEventListener("click", () => {
+    app.element.addEventListener("dblclick", () => {
       app.page.style.display = "flex";
     });
     app.close.addEventListener("click", () => {

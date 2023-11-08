@@ -102,7 +102,7 @@ body {
 #projects-full {
   display: none;
   position: absolute;
-  width: 199px;
+  width: 399px;
   height: 310px;
   background-color: whitesmoke;
   border: grey 3px solid;
@@ -132,11 +132,11 @@ body {
 }
 /* projects classes */
 
-/*Window classes*/
+/*top Window classes*/
 .top-menu {
   padding: 10px;
   background-color: #1186e3;
-  width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -160,8 +160,38 @@ body {
 .closeX:active {
   background-color: rgb(113, 16, 16);
 }
+/*top Window classes*/
 
-/*Window classes*/
+/*botom window classes*/
+#start-top {
+  background-color: #245edc;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#left-side-menu {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#right-side-menu {
+  background-color: rgb(170, 170, 170);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+#start-bottom {
+  background-color: #245edc;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+/*botom window classes*/
+
+/*common clases*/
 .row {
   display: flex;
   flex-direction: row;
@@ -170,3 +200,4 @@ body {
   display: flex;
   flex-direction: column;
 }
+/*common clases*/
