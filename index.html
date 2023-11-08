@@ -5,28 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/app.js"></script>
+    <script src="./js/app.js" type="module"></script>
   </head>
   <body>
     <div id="screen">
-      <div class="app">
-        <img src="./app-icons/bin.png" alt="" />
-        <p>Bin</p>
-      </div>
+      <div class="column">
+        <div class="app">
+          <img src="./app-icons/bin.png" alt="" id="bin-file" />
+          <p>Bin</p>
+        </div>
 
-      <div class="app">
-        <img src="./app-icons/folder.png" alt="" />
-        <p>projects</p>
-      </div>
+        <div class="app">
+          <img src="./app-icons/folder.png" alt="" id="projects-file" />
+          <p>projects</p>
+        </div>
 
-      <div class="app">
-        <img src="./app-icons/notepad.png" alt="" id="binary-file" />
-        <p>Binary.txt</p>
-      </div>
+        <div class="app">
+          <img src="./app-icons/notepad.png" alt="" id="binary-file" />
+          <p>Binary.txt</p>
+        </div>
 
-      <div class="app">
-        <img src="./app-icons/wordfile.png" alt="" id="cv-file" />
-        <p>CV.docx</p>
+        <div class="app">
+          <img src="./app-icons/wordfile.png" alt="" id="cv-file" />
+          <p>CV.docx</p>
+        </div>
       </div>
 
       <div id="cv-full">
@@ -40,7 +42,7 @@
             <div>
               <button class="top-btns-style">-</button>
               <button class="top-btns-style">[]</button>
-              <button id="close-binary" class="closeX top-btns-style">X</button>
+              <button id="close-cv" class="closeX top-btns-style">X</button>
             </div>
           </div>
 
@@ -113,10 +115,31 @@
         </div>
       </div>
 
+      <div id="bin-full">
+        <div class="column">
+          <div class="top-menu">
+            <div class="row">
+              <img src="" alt="" />
+              <h4>bin</h4>
+            </div>
+
+            <div>
+              <button class="top-btns-style">-</button>
+              <button class="top-btns-style">[]</button>
+              <button id="close-bin" class="closeX top-btns-style">X</button>
+            </div>
+          </div>
+
+          <div class="column"></div>
+        </div>
+      </div>
+
       <div id="btm-navbar">
         <div id="startbtn">Start</div>
         <div id="middle-stuff"></div>
-        <div id="end-menu"></div>
+        <div id="end-menu">
+          <div id="clock"></div>
+        </div>
       </div>
     </div>
   </body>

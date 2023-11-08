@@ -1,38 +1,22 @@
+import { cv } from "./module.js";
+import { bin } from "./module.js";
+import { binary } from "./module.js";
+import { projects } from "./module.js";
+
 document.addEventListener("DOMContentLoaded", (event) => {
-  const cv = {
-    element: document.querySelector("#cv-file"),
-    page: document.querySelector("#cv-full"),
-    close: document.querySelector("#close-cv"),
-    isDragging: false,
-  };
-
-  const binary = {
-    element: document.querySelector("#binary-file"),
-    page: document.querySelector("#binary-full"),
-    close: document.querySelector("#close-binary"),
-    isDragging: false,
-  };
-
-  const projects = {
-    element: document.querySelector("#projects-file"),
-    page: document.querySelector("#projects-full"),
-    close: document.querySelector("#close-projects"),
-    isDragging: false,
-  };
-
   function handleClick(app) {
     app.element.addEventListener("click", () => {
       app.page.style.display = "flex";
     });
     app.close.addEventListener("click", () => {
       app.page.style.display = "none";
-      app.isDragging = false;
     });
   }
 
   handleClick(cv);
   handleClick(binary);
   handleClick(projects);
+  handleClick(bin);
 
   function handleDrag(app) {
     app.page.addEventListener("mousedown", (e) => {
@@ -58,4 +42,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
   handleDrag(cv);
   handleDrag(binary);
   handleDrag(projects);
+  handleDrag(bin);
+
+  // clock //
+  function currentTime() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+    let session = "AM";
+
+    if (hour == 0) {
+      hour = 12;
+      session = "AM";
+    }
+    if (hour > 12) {
+      hour = hour - 12;
+      session = "PM";
+    }
+
+    hour = hour < 10 ? "0" + hour : hour;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    let time = hour + ":" + minutes + session;
+
+    document.querySelector("#clock").textContent = time;
+    let t = setTimeout(function () {
+      currentTime();
+    }, 1000);
+  }
+  currentTime();
+  // clock //
 });

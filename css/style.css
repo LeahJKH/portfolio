@@ -47,7 +47,7 @@ body {
   flex-direction: column;
   width: 50px;
   height: 50px;
-  margin: 10px;
+  margin: 20px 10px;
 }
 .app > p {
   text-align: center;
@@ -55,6 +55,7 @@ body {
 .app > img {
   cursor: pointer;
 }
+
 /* cv classes */
 #cv-full {
   display: none;
@@ -93,7 +94,7 @@ body {
 }
 /* binary classes */
 
-/* binary classes */
+/* projects classes */
 #projects-full {
   display: none;
   position: absolute;
@@ -104,6 +105,23 @@ body {
   overflow: hidden;
 }
 #projects-full.draggable {
+  cursor: grab;
+  user-select: none;
+  position: absolute;
+}
+/* projects classes */
+
+/* projects classes */
+#bin-full {
+  display: none;
+  position: absolute;
+  width: 330px;
+  height: 310px;
+  background-color: whitesmoke;
+  border: grey 3px solid;
+  overflow: hidden;
+}
+#bin-full.draggable {
   cursor: grab;
   user-select: none;
   position: absolute;
