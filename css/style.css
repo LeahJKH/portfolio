@@ -102,7 +102,7 @@ body {
 #projects-full {
   display: none;
   position: absolute;
-  width: 330px;
+  width: 199px;
   height: 310px;
   background-color: whitesmoke;
   border: grey 3px solid;
@@ -141,6 +141,11 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.top-menu-pic {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 .top-btns-style {
   width: 25px;
