@@ -44,21 +44,33 @@ body {
   cursor: pointer;
 }
 
-/* cv classes */
-#cv-full {
+/*app common class*/
+#cv-full,
+#binary-full,
+#projects-full,
+#bin-full {
   display: none;
   position: absolute;
-  width: 400px;
-  height: 300px;
+  overflow: hidden;
   background-color: whitesmoke;
   border: grey 3px solid;
-  overflow: hidden;
 }
-#cv-full.draggable {
+#bin-full.draggable,
+#cv-full.draggable,
+#binary-full.draggable,
+#projects-full.draggable {
   cursor: grab;
   user-select: none;
   position: absolute;
 }
+/*app common class*/
+
+/* cv classes */
+#cv-full {
+  width: 400px;
+  height: 300px;
+}
+
 #cv-photo {
   width: 150px;
   height: 250px;
@@ -67,19 +79,10 @@ body {
 
 /* binary classes */
 #binary-full {
-  display: none;
-  position: absolute;
   width: 330px;
   height: 310px;
-  background-color: whitesmoke;
-  border: grey 3px solid;
-  overflow: hidden;
 }
-#binary-full.draggable {
-  cursor: grab;
-  user-select: none;
-  position: absolute;
-}
+
 #binary-code {
   padding: 10px;
   font-size: 14px;
@@ -88,43 +91,25 @@ body {
 
 /* projects classes */
 #projects-full {
-  display: none;
-  position: absolute;
   width: 399px;
   height: 310px;
-  background-color: whitesmoke;
-  border: grey 3px solid;
-  overflow: hidden;
 }
-#projects-full.draggable {
-  cursor: grab;
-  user-select: none;
-  position: absolute;
-}
+
 /* projects classes */
 
 /* projects classes */
 #bin-full {
-  display: none;
-  position: absolute;
   width: 330px;
   height: 310px;
-  background-color: whitesmoke;
-  border: grey 3px solid;
-  overflow: hidden;
 }
-#bin-full.draggable {
-  cursor: grab;
-  user-select: none;
-  position: absolute;
-}
+
 /* projects classes */
 
 /*top Window classes*/
 .top-menu {
   padding: 10px;
   background-color: #1186e3;
-
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -199,10 +184,12 @@ body {
 }
 #start-full {
   display: none;
-  height: 800px;
+  height: 300px;
   width: 200px;
   background-color: white;
   flex-direction: column;
+  position: absolute;
+  bottom: 24px;
 }
 /*botom window classes*/
 
@@ -215,7 +202,25 @@ body {
   display: flex;
   flex-direction: column;
 }
+.resizer {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+/* Add resizable class to all full pages */
+.resizable {
+  resize: both;
+  overflow: auto;
+}
 /*common clases*/
+
+/*clock classes*/
 #clock {
   color: black;
 }
+/*clock classes*/

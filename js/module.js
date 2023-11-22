@@ -3,6 +3,7 @@ export const cv = {
   page: document.querySelector("#cv-full"),
   close: document.querySelector("#close-cv"),
   isDragging: false,
+  isResizing: false,
 };
 
 export const binary = {
@@ -10,6 +11,7 @@ export const binary = {
   page: document.querySelector("#binary-full"),
   close: document.querySelector("#close-binary"),
   isDragging: false,
+  isResizing: false,
 };
 
 export const projects = {
@@ -17,10 +19,12 @@ export const projects = {
   page: document.querySelector("#projects-full"),
   close: document.querySelector("#close-projects"),
   isDragging: false,
+  isResizing: false,
 };
 export const bin = {
   element: document.querySelector("#bin-file"),
   page: document.querySelector("#bin-full"),
   close: document.querySelector("#close-bin"),
   isDragging: false,
+  isResizing: false,
 };

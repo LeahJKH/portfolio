@@ -14,31 +14,44 @@ handleClick(binary);
 handleClick(projects);
 handleClick(bin);
 
-function handleDrag(app) {
+function handleDragAndResize(app) {
+  let offsetX, offsetY, initialWidth, initialHeight;
+
   app.page.addEventListener("mousedown", (e) => {
-    app.isDragging = true;
-    const offsetX = e.clientX - app.page.getBoundingClientRect().left;
-    const offsetY = e.clientY - app.page.getBoundingClientRect().top;
+    if (e.target.classList.contains("resizable")) {
+      app.isResizing = true;
+      initialWidth = app.page.offsetWidth;
+      initialHeight = app.page.offsetHeight;
+    } else {
+      app.isDragging = true;
+      offsetX = e.clientX - app.page.getBoundingClientRect().left;
+      offsetY = e.clientY - app.page.getBoundingClientRect().top;
+    }
+  });
 
-    document.addEventListener("mousemove", (e) => {
-      if (app.isDragging) {
-        app.page.style.left = e.clientX - offsetX + "px";
-        app.page.style.top = e.clientY - offsetY + "px";
-      }
-    });
+  document.addEventListener("mousemove", (e) => {
+    if (app.isResizing) {
+      const newWidth = initialWidth + e.clientX - app.page.getBoundingClientRect().left;
+      const newHeight = initialHeight + e.clientY - app.page.getBoundingClientRect().top;
 
-    document.addEventListener("mouseup", () => {
-      app.isDragging = false;
-      document.removeEventListener("mousemove", moveElement);
-      document.removeEventListener("mouseup", stopDragging);
-    });
+      app.page.style.width = newWidth + "px";
+      app.page.style.height = newHeight + "px";
+    } else if (app.isDragging) {
+      app.page.style.left = e.clientX - offsetX + "px";
+      app.page.style.top = e.clientY - offsetY + "px";
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    app.isDragging = false;
+    app.isResizing = false;
   });
 }
 
-handleDrag(cv);
-handleDrag(binary);
-handleDrag(projects);
-handleDrag(bin);
+handleDragAndResize(cv);
+handleDragAndResize(binary);
+handleDragAndResize(projects);
+handleDragAndResize(bin);
 
 // clock //
 function currentTime() {
@@ -47,12 +60,11 @@ function currentTime() {
   let minutes = date.getMinutes();
   let session = "AM";
 
-  if (hour == 0) {
+  if (hour === 0) {
     hour = 12;
     session = "AM";
-  }
-  if (hour > 12) {
-    hour = hour - 12;
+  } else if (hour > 12) {
+    hour -= 12;
     session = "PM";
   }
 
@@ -62,25 +74,19 @@ function currentTime() {
   let time = hour + ":" + minutes + session;
 
   document.querySelector("#clock").textContent = time;
-  let t = setTimeout(function () {
-    currentTime();
-  }, 1000);
+  setTimeout(currentTime, 1000);
 }
+
 currentTime();
 // clock //
+
 //start logic//
 const startBtn = document.querySelector("#start-btn");
 const startFull = document.querySelector("#start-full");
 let menuIsOpen = true;
 
 startBtn.addEventListener("click", function () {
-  if (!menuIsOpen) {
-    menuIsOpen = true;
-    startFull.style.display = menuIsOpen ? "none" : "flex";
-  } else {
-    menuIsOpen = false;
-    startFull.style.display = menuIsOpen ? "none" : "flex";
-  }
+  menuIsOpen = !menuIsOpen;
+  startFull.style.display = menuIsOpen ? "flex" : "none";
 });
-
 //start logic//
