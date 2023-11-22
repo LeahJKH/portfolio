@@ -1,7 +1,7 @@
 import { cv, bin, binary, projects } from "./module.js";
 
 function handleClick(app) {
-  app.element.addEventListener("dblclick", () => {
+  app.element.addEventListener("click", () => {
     app.page.style.display = "flex";
   });
   app.close.addEventListener("click", () => {
