@@ -10,7 +10,7 @@ body {
   background-image: url("/images/hillsite.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 603px;
+  height: 95vh;
   display: flex;
   overflow: hidden;
 }
@@ -79,8 +79,8 @@ body {
 
 /* binary classes */
 #binary-full {
-  width: 330px;
-  height: 310px;
+  width: 400px;
+  height: 300px;
 }
 
 #binary-code {
@@ -91,16 +91,20 @@ body {
 
 /* projects classes */
 #projects-full {
-  width: 399px;
-  height: 310px;
+  width: 400px;
+  height: 300px;
+}
+.Files-system {
+  min-width: 100px;
+  margin: 5px;
 }
 
 /* projects classes */
 
 /* projects classes */
 #bin-full {
-  width: 330px;
-  height: 310px;
+  width: 400px;
+  height: 300px;
 }
 
 /* projects classes */
