@@ -7,7 +7,7 @@ body {
   overflow: hidden;
 }
 #screen {
-  background-image: url("/images/hillsite.jpg");
+  background-image: url("../images/hillsite.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 95vh;
@@ -91,7 +91,7 @@ body {
 
 /* projects classes */
 #projects-full {
-  width: 400px;
+  min-width: 400px;
   height: 300px;
 }
 .Files-system {
