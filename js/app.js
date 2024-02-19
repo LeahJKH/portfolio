@@ -58,14 +58,14 @@ function currentTime() {
   let date = new Date();
   let hour = date.getHours();
   let minutes = date.getMinutes();
-  let session = "AM";
+  let session = "PM";
 
   if (hour === 0) {
     hour = 12;
-    session = "AM";
+    session = "PM";
   } else if (hour > 12) {
     hour -= 12;
-    session = "PM";
+    session = "AM";
   }
 
   hour = hour < 10 ? "0" + hour : hour;
