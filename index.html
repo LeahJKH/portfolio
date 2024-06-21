@@ -1,171 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/app.js" type="module"></script>
-  </head>
-  <body>
-    <div id="screen">
-      <div class="column">
-        <div class="app">
-          <img src="./app-icons/bin.png" alt="" id="bin-file" />
-          <p>Bin</p>
-        </div>
-
-        <div class="app">
-          <img src="./app-icons/folder.png" alt="" id="projects-file" />
-          <p>projects</p>
-        </div>
-
-        <div class="app">
-          <img src="./app-icons/notepad.png" alt="" id="binary-file" />
-          <p>Binary.txt</p>
-        </div>
-
-        <div class="app">
-          <img src="./app-icons/wordfile.png" alt="" id="cv-file" />
-          <p>CV.docx</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/app.js" type="module"></script>
+</head>
+<body>
+  <div id="app-container">
+    <div class="column">
+      <!-- App icons will be appended here -->
+    </div>
+    
+    <div id="start-full">
+      <div id="start-top"></div>
+      <div class="row">
+        <div id="left-side-menu"></div>
+        <div id="right-side-menu"></div>
       </div>
+      <div id="start-bottom"></div>
+    </div>
 
-      <div id="cv-full" class="resizable">
-        <div class="column">
-          <div class="top-menu" class="draggable">
-            <div class="row">
-              <img src="./app-icons/wordfile.png" alt="" class="top-menu-pic" />
-              <h4>cv.docx</h4>
-            </div>
+    <div id="btm-navbar">
+      <button id="start-btn">Start</button>
 
-            <div>
-              <button class="top-btns-style">-</button>
-              <button class="top-btns-style">[]</button>
-              <button id="close-cv" class="closeX top-btns-style">X</button>
-            </div>
-          </div>
-
-          <div class="row">
-            <img src="./images/pfp.jpg" alt="" id="cv-photo" />
-            <div class="column">
-              <h1>This is the cv</h1>
-              <p>navn: Leah Yoimiya Johansen</p>
-              <p>fødselsdato: 23.02.03</p>
-              <p>
-                jeg er en hyppig programerer og jeg elsker å snakke med folk. jeg har jobbet innen
-                barn og ungdom men det er programering jeg brenner for
-              </p>
-              <p>nummer: 91527159</p>
-              <p>email: jobbjohansen@gmail.com</p>
-            </div>
-          </div>
-        </div>
-        <div class="resizer"></div>
-      </div>
-
-      <div id="binary-full" class="resizable">
-        <div class="column">
-          <div class="top-menu" class="draggable">
-            <div class="row">
-              <img src="./app-icons/notepad.png" alt="" class="top-menu-pic" />
-              <h4>binary.txt</h4>
-            </div>
-
-            <div>
-              <button class="top-btns-style">-</button>
-              <button class="top-btns-style">[]</button>
-              <button id="close-binary" class="closeX top-btns-style">X</button>
-            </div>
-          </div>
-
-          <div class="row">
-            <p id="binary-code">
-              01001000 01100101 01111001 00100000 01111001 01101111 01110101 00100000 01100110
-              01101111 01110101 01101110 01100100 00100000 01110100 01101000 01100101 00100000
-              01100010 01101001 01101110 01100001 01110010 01111001 00100000 01100011 01101111
-              01100100 01100101 00101110 00100000 01110100 01101000 01100101 00100000 01110000
-              01100001 01110011 01110011 01110111 01101111 01110010 01100100 00100000 01101001
-              01110011 00100000 00111000 00110101 00110111 00110010 00100000 01100111 01101111
-              01101111 01100100 00100000 01101100 01110101 01100011 01101011 00100001
-            </p>
-          </div>
-        </div>
-        <div class="resizer"></div>
-      </div>
-
-      <div id="projects-full" class="resizable">
-        <div class="column">
-        <div class="top-menu" class="draggable">
-            <div class="row">
-              <img src="./app-icons/folder.png" alt="" class="top-menu-pic" />
-              <h4>projects</h4>
-            </div>
-
-            <div>
-              <button class="top-btns-style">-</button>
-              <button class="top-btns-style">[]</button>
-              <button id="close-projects" class="closeX top-btns-style">X</button>
-            </div>
-          </div>
-            <div class="resizer"></div>
-          
-
-          <div class="column">
-
-            <div class="row wrap"> 
-              <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" />Music app</div>
-            <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" />Per Clicker</div>
-            <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" />Dungeon crawler</div>
-            <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" />portfolio</div>
-              <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" />Music app</div>
-            <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" />React</div>
-            <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" />C#</div>
-            <div class="Files-system"><img src="./app-icons/folder.png" alt="" class="top-menu-pic" /></div>
-          </div>
-           
-          </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="bin-full" class="resizable">
-        <div class="column">
-          <div class="top-menu" class="draggable">
-            <div class="row">
-              <img src="./app-icons/bin.png" alt="" class="top-menu-pic" />
-              <h4>bin</h4>
-            </div>
-
-            <div>
-              <button class="top-btns-style">-</button>
-              <button class="top-btns-style">[]</button>
-              <button id="close-bin" class="closeX top-btns-style">X</button>
-            </div>
-            <div class="resizer"></div>
-          </div>
-
-          <div class="column"></div>
-        </div>
-      </div>
-
-      <div id="start-full">
-        <div id="start-top"></div>
-        <div class="row">
-          <div id="left-side-menu"></div>
-          <div id="right-side-menu"></div>
-        </div>
-        <div id="start-bottom"></div>
-      </div>
-
-      <div id="btm-navbar">
-        <button id="start-btn">Start</button>
-
-        <div id="middle-stuff"></div>
-        <div id="end-menu">
-          <div id="clock"></div>
-        </div>
+      <div id="middle-stuff"></div>
+      <div id="end-menu">
+        <div id="clock"></div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
