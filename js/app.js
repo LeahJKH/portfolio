@@ -1,50 +1,103 @@
-import { cv, bin, binary, projects } from "./module.js";
+import { setupBin, binClicked } from './apps/bin.js';
+import { setupProjects, ProjectsClicked } from './apps/projects.js';
+import { setupBinary, binaryClicked } from './apps/binary.js';
+import { setupCV, CvClicked } from './apps/cv.js';
+import { currentTime } from './Small-logic/Clock.js';
 
-function handleClick(app) {
+currentTime();
+
+// Initialize app objects
+const cv = setupCV();
+const binary = setupBinary();
+const projects = setupProjects();
+const bin = setupBin();
+
+console.log('cv:', cv);
+console.log('binary:', binary);
+console.log('projects:', projects);
+console.log('bin:', bin);
+
+// Append app elements to a container
+const appContainer = document.getElementById('app-container'); // Ensure you have a container with this ID in your HTML
+
+appContainer.appendChild(cv.element);
+appContainer.appendChild(binary.element);
+appContainer.appendChild(projects.element);
+appContainer.appendChild(bin.element);
+
+// Append page elements to the app container
+appContainer.appendChild(cv.page);
+appContainer.appendChild(binary.page);
+appContainer.appendChild(projects.page);
+appContainer.appendChild(bin.page);
+
+// Add event listeners and handlers
+function handleClick(app, clickHandler) {
+  if (!app.element || !app.page || !app.close) {
+    console.error('App object is missing required properties:', app);
+    return;
+  }
+
   app.element.addEventListener("click", () => {
     app.page.style.display = "flex";
+    clickHandler();
   });
   app.close.addEventListener("click", () => {
     app.page.style.display = "none";
   });
 }
 
-handleClick(cv);
-handleClick(binary);
-handleClick(projects);
-handleClick(bin);
+handleClick(cv, CvClicked);
+handleClick(binary, binaryClicked);
+handleClick(projects, ProjectsClicked);
+handleClick(bin, binClicked);
 
+// Add drag and resize functionality
 function handleDragAndResize(app) {
-  let offsetX, offsetY, initialWidth, initialHeight;
+  if (!app.page) {
+    console.error('App object is missing required properties for drag and resize:', app);
+    return;
+  }
 
-  app.page.addEventListener("mousedown", (e) => {
-    if (e.target.classList.contains("resizable")) {
-      app.isResizing = true;
-      initialWidth = app.page.offsetWidth;
-      initialHeight = app.page.offsetHeight;
-    } else {
-      app.isDragging = true;
-      offsetX = e.clientX - app.page.getBoundingClientRect().left;
-      offsetY = e.clientY - app.page.getBoundingClientRect().top;
-    }
+  let offsetX, offsetY, initialWidth, initialHeight;
+  let isDragging = false;
+  let isResizing = false;
+
+  const topMenu = app.page.querySelector('.top-menu');
+  const resizer = app.page.querySelector('.resizer');
+
+  topMenu.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - app.page.getBoundingClientRect().left;
+    offsetY = e.clientY - app.page.getBoundingClientRect().top;
+    document.body.style.cursor = 'grabbing';
+  });
+
+  resizer.addEventListener("mousedown", (e) => {
+    isResizing = true;
+    initialWidth = app.page.offsetWidth;
+    initialHeight = app.page.offsetHeight;
+    offsetX = e.clientX;
+    offsetY = e.clientY;
+    document.body.style.cursor = 'se-resize';
   });
 
   document.addEventListener("mousemove", (e) => {
-    if (app.isResizing) {
-      const newWidth = initialWidth + e.clientX - app.page.getBoundingClientRect().left;
-      const newHeight = initialHeight + e.clientY - app.page.getBoundingClientRect().top;
-
-      app.page.style.width = newWidth + "px";
-      app.page.style.height = newHeight + "px";
-    } else if (app.isDragging) {
+    if (isDragging) {
       app.page.style.left = e.clientX - offsetX + "px";
       app.page.style.top = e.clientY - offsetY + "px";
+    } else if (isResizing) {
+      const newWidth = initialWidth + (e.clientX - offsetX);
+      const newHeight = initialHeight + (e.clientY - offsetY);
+      app.page.style.width = newWidth + "px";
+      app.page.style.height = newHeight + "px";
     }
   });
 
   document.addEventListener("mouseup", () => {
-    app.isDragging = false;
-    app.isResizing = false;
+    isDragging = false;
+    isResizing = false;
+    document.body.style.cursor = 'default';
   });
 }
 
@@ -52,41 +105,3 @@ handleDragAndResize(cv);
 handleDragAndResize(binary);
 handleDragAndResize(projects);
 handleDragAndResize(bin);
-
-// clock //
-function currentTime() {
-  let date = new Date();
-  let hour = date.getHours();
-  let minutes = date.getMinutes();
-  let session = "PM";
-
-  if (hour === 0) {
-    hour = 12;
-    session = "PM";
-  } else if (hour > 12) {
-    hour -= 12;
-    session = "AM";
-  }
-
-  hour = hour < 10 ? "0" + hour : hour;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-
-  let time = hour + ":" + minutes + session;
-
-  document.querySelector("#clock").textContent = time;
-  setTimeout(currentTime, 1000);
-}
-
-currentTime();
-// clock //
-
-//start logic//
-const startBtn = document.querySelector("#start-btn");
-const startFull = document.querySelector("#start-full");
-let menuIsOpen = true;
-
-startBtn.addEventListener("click", function () {
-  menuIsOpen = !menuIsOpen;
-  startFull.style.display = menuIsOpen ? "flex" : "none";
-});
-//start logic//
