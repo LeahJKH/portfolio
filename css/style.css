@@ -3,17 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   overflow: hidden;
 }
-#screen {
+
+#app-container {
   background-image: url("../images/hillsite.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 95vh;
   display: flex;
   overflow: hidden;
+  position: relative; /* Add position relative to position absolute children */
 }
+
 #btm-navbar {
   background-color: #245edc;
   align-self: end;
@@ -21,6 +25,7 @@ body {
   height: 5%;
   display: flex;
   position: absolute;
+  bottom: 0;
 }
 
 #end-menu {
@@ -28,8 +33,9 @@ body {
   width: 11%;
   height: 100%;
   display: flex;
-  margin-left: 80%;
+  margin-left: auto;
 }
+
 .app {
   display: flex;
   flex-direction: column;
@@ -37,14 +43,16 @@ body {
   height: 50px;
   margin: 20px 10px;
 }
+
 .app > p {
   text-align: center;
 }
+
 .app > img {
   cursor: pointer;
 }
 
-/*app common class*/
+/* app common class */
 #cv-full,
 #binary-full,
 #projects-full,
@@ -54,7 +62,11 @@ body {
   overflow: hidden;
   background-color: whitesmoke;
   border: grey 3px solid;
+  top: 50px; /* Adjust to position the windows below the start bar */
+  left: 50px; /* Adjust initial position */
+  z-index: 10; /* Ensure they are above other elements */
 }
+
 #bin-full.draggable,
 #cv-full.draggable,
 #binary-full.draggable,
@@ -63,7 +75,6 @@ body {
   user-select: none;
   position: absolute;
 }
-/*app common class*/
 
 /* cv classes */
 #cv-full {
@@ -75,7 +86,6 @@ body {
   width: 150px;
   height: 250px;
 }
-/* cv classes */
 
 /* binary classes */
 #binary-full {
@@ -87,29 +97,25 @@ body {
   padding: 10px;
   font-size: 14px;
 }
-/* binary classes */
 
 /* projects classes */
 #projects-full {
   min-width: 400px;
   height: 300px;
 }
+
 .Files-system {
   min-width: 100px;
   margin: 5px;
 }
 
-/* projects classes */
-
-/* projects classes */
+/* bin classes */
 #bin-full {
   width: 400px;
   height: 300px;
 }
 
-/* projects classes */
-
-/*top Window classes*/
+/* top Window classes */
 .top-menu {
   padding: 10px;
   background-color: #1186e3;
@@ -118,12 +124,15 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: grab; /* Indicate draggable area */
 }
+
 .top-menu-pic {
   width: 30px;
   height: 30px;
   margin-right: 5px;
 }
+
 .top-btns-style {
   width: 25px;
   height: 25px;
@@ -131,15 +140,16 @@ body {
   background-color: #1186e3;
   box-shadow: inset rgba(255, 255, 255, 0.343) 4px 4px 10px 2px;
 }
+
 .closeX {
   background-color: red;
 }
+
 .closeX:active {
   background-color: rgb(113, 16, 16);
 }
-/*top Window classes*/
 
-/*botom window classes*/
+/* bottom window classes */
 #start-btn {
   display: flex;
   background-color: #1dc824;
@@ -160,6 +170,7 @@ body {
   justify-content: left;
   align-items: center;
 }
+
 #left-side-menu {
   background-color: white;
   display: flex;
@@ -169,6 +180,7 @@ body {
   width: 50%;
   height: 30%;
 }
+
 #right-side-menu {
   background-color: rgb(170, 170, 170);
   display: flex;
@@ -178,6 +190,7 @@ body {
   width: 50%;
   height: 30%;
 }
+
 #start-bottom {
   background-color: #245edc;
   width: 100%;
@@ -186,6 +199,7 @@ body {
   justify-content: right;
   align-items: center;
 }
+
 #start-full {
   display: none;
   height: 300px;
@@ -195,20 +209,22 @@ body {
   position: absolute;
   bottom: 24px;
 }
-/*botom window classes*/
 
-/*common clases*/
+/* common classes */
 .row {
   display: flex;
   flex-direction: row;
 }
+
 .wrap {
   flex-wrap: wrap;
 }
+
 .column {
   display: flex;
   flex-direction: column;
 }
+
 .resizer {
   width: 10px;
   height: 10px;
@@ -224,10 +240,8 @@ body {
   resize: both;
   overflow: auto;
 }
-/*common clases*/
 
-/*clock classes*/
+/* clock classes */
 #clock {
   color: black;
 }
-/*clock classes*/
