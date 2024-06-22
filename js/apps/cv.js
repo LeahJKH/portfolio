@@ -32,7 +32,18 @@ export function setupCV() {
         </div>
       </div>
       <div class="row">
-        
+        <img src="./images/pfp.jpg" alt="" id="cv-photo" />
+            <div class="column">
+              <h1>This is the cv</h1>
+              <p>navn: Leah Yoimiya Johansen</p>
+              <p>fødselsdato: 23.02.03</p>
+              <p>
+                jeg er en hyppig programerer og jeg elsker å snakke med folk. jeg har jobbet innen
+                barn og ungdom men det er programering jeg brenner for
+              </p>
+              <p>nummer: 91527159</p>
+              <p>email: jobbjohansen@gmail.com</p>
+            </div>
       </div>
     </div>
     <div class="resizer"></div>
