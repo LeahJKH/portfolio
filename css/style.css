@@ -12,17 +12,17 @@ body {
   background-image: url("../images/hillsite.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   overflow: hidden;
-  position: relative; /* Add position relative to position absolute children */
+  position: relative;
 }
 
 #btm-navbar {
   background-color: #245edc;
   align-self: end;
   width: 100%;
-  height: 5%;
+  height: 7%;
   display: flex;
   position: absolute;
   bottom: 0;
