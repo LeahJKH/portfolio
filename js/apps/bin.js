@@ -19,24 +19,61 @@ export function setupBin() {
   close.id = "close-bin";
   close.textContent = "X";
 
-  page.innerHTML = `
-    <div class="column">
-      <div class="top-menu draggable">
-        <div class="row">
-          <img src="./app-icons/bin.png" alt="" class="top-menu-pic" />
-          <h4>Bin</h4>
-        </div>
-        <div>
-          <button class="top-btns-style">-</button>
-          <button class="top-btns-style">[]</button>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Your bin content here -->
-      </div>
-    </div>
-    <div class="resizer"></div>
-  `;
+  const columnDiv = document.createElement('div');
+  columnDiv.className = 'column';
+    const topMenuDiv = document.createElement('div');
+    topMenuDiv.className = 'top-menu draggable';
+      const topRowDiv = document.createElement('div');
+      topRowDiv.className = 'row';
+  
+      const topImg = document.createElement('img');
+      topImg.className = 'top-menu-pic';
+      topImg.src = "./app-icons/bin.png"
+      topRowDiv.appendChild(topImg);
+  
+      const topH4 = document.createElement('h4');
+      topH4.textContent = 'Bin';
+      topRowDiv.appendChild(topH4);
+  
+    topMenuDiv.appendChild(topRowDiv);
+  
+    const buttonContainerDiv = document.createElement('div');
+      const minimizeButton = document.createElement('button');
+      minimizeButton.className = 'top-btns-style';
+      minimizeButton.textContent = '-';
+  
+      const maximizeButton = document.createElement('button');
+      maximizeButton.className = 'top-btns-style';
+      maximizeButton.textContent = '[]';
+  
+      buttonContainerDiv.appendChild(minimizeButton);
+      buttonContainerDiv.appendChild(maximizeButton);
+  
+    topMenuDiv.appendChild(buttonContainerDiv);
+  columnDiv.appendChild(topMenuDiv);
+  
+    const secondRowDiv = document.createElement('div');
+    secondRowDiv.className = 'row';
+  
+  
+  
+    const textColumnDiv = document.createElement('div');
+    textColumnDiv.className = 'column';
+  
+  
+    
+  
+    secondRowDiv.appendChild(textColumnDiv);
+  
+  columnDiv.appendChild(secondRowDiv);
+  
+  const resizerDiv = document.createElement('div');
+  resizerDiv.className = 'resizer';
+  columnDiv.appendChild(resizerDiv);
+  page.appendChild(columnDiv);
+  page.appendChild(close);
+  document.body.appendChild(page);
+    
   page.appendChild(close);
   document.body.appendChild(page);
 
