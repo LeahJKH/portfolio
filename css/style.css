@@ -142,6 +142,9 @@ body {
 }
 
 .closeX {
+  width: 25px;
+  height: 25px;
+  border: 2px white solid;
   background-color: red;
 }
 
