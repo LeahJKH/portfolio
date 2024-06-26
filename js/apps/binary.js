@@ -18,7 +18,7 @@ export function setupBinary() {
 
 
   const columnDiv = document.createElement('div');
-  columnDiv.className = 'column';
+  columnDiv.className = 'column full-width';
   
   const topMenuDiv = document.createElement('div');
   topMenuDiv.className = 'top-menu draggable';

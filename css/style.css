@@ -62,9 +62,9 @@ body {
   overflow: hidden;
   background-color: whitesmoke;
   border: grey 3px solid;
-  top: 50px; /* Adjust to position the windows below the start bar */
-  left: 50px; /* Adjust initial position */
-  z-index: 10; /* Ensure they are above other elements */
+  top: 50px; 
+  left: 50px;
+  z-index: 10; 
 }
 
 #bin-full.draggable,
@@ -119,12 +119,12 @@ body {
 .top-menu {
   padding: 10px;
   background-color: #1186e3;
-  width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  cursor: grab; /* Indicate draggable area */
+  cursor: grab; 
 }
 
 .top-menu-pic {
@@ -167,7 +167,6 @@ body {
 
 #start-top {
   background-color: #245edc;
-  width: 100%;
   height: 20%;
   display: flex;
   justify-content: left;
@@ -196,7 +195,6 @@ body {
 
 #start-bottom {
   background-color: #245edc;
-  width: 100%;
   height: 20%;
   display: flex;
   justify-content: right;
@@ -226,6 +224,10 @@ body {
 .column {
   display: flex;
   flex-direction: column;
+  
+}
+.full-width, #start-bottom, #start-top, .top-menu  {
+  width: 100%;
 }
 
 .resizer {
@@ -238,7 +240,7 @@ body {
   cursor: se-resize;
 }
 
-/* Add resizable class to all full pages */
+
 .resizable {
   resize: both;
   overflow: auto;
