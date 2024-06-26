@@ -1,0 +1,62 @@
+/* clock classes */
+#clock {
+    color: black;
+  }
+
+  #start-btn {
+    display: flex;
+    background-color: #1dc824;
+    width: 11%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  #start-top {
+    background-color: #245edc;
+    height: 20%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  #left-side-menu {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 30%;
+  }
+  
+  #right-side-menu {
+    background-color: rgb(170, 170, 170);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+    height: 30%;
+  }
+  
+  #start-bottom {
+    background-color: #245edc;
+    height: 20%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  
+  #start-full {
+    display: none;
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    flex-direction: column;
+    position: absolute;
+    bottom: 24px;
+  }

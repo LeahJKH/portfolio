@@ -36,45 +36,12 @@ body {
   margin-left: auto;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  width: 50px;
-  height: 50px;
-  margin: 20px 10px;
-}
 
-.app > p {
-  text-align: center;
-}
-
-.app > img {
-  cursor: pointer;
-}
 
 /* app common class */
-#cv-full,
-#binary-full,
-#projects-full,
-#bin-full {
-  display: none;
-  position: absolute;
-  overflow: hidden;
-  background-color: whitesmoke;
-  border: grey 3px solid;
-  top: 50px; 
-  left: 50px;
-  z-index: 10; 
-}
 
-#bin-full.draggable,
-#cv-full.draggable,
-#binary-full.draggable,
-#projects-full.draggable {
-  cursor: grab;
-  user-select: none;
-  position: absolute;
-}
+
+
 
 /* cv classes */
 #cv-full {
@@ -115,121 +82,28 @@ body {
   height: 300px;
 }
 
-/* top Window classes */
-.top-menu {
-  padding: 10px;
-  background-color: #1186e3;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  cursor: grab; 
-}
 
-.top-menu-pic {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-}
-
-.top-btns-style {
-  width: 25px;
-  height: 25px;
-  border: 2px white solid;
-  background-color: #1186e3;
-  box-shadow: inset rgba(255, 255, 255, 0.343) 4px 4px 10px 2px;
-}
-
-.closeX {
-  width: 25px;
-  height: 25px;
-  border: 2px white solid;
-  background-color: red;
-}
-
-.closeX:active {
-  background-color: rgb(113, 16, 16);
-}
 
 /* bottom window classes */
-#start-btn {
-  display: flex;
-  background-color: #1dc824;
-  width: 11%;
-  height: 100%;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
 
-#start-top {
-  background-color: #245edc;
-  height: 20%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-#left-side-menu {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 50%;
-  height: 30%;
-}
-
-#right-side-menu {
-  background-color: rgb(170, 170, 170);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  width: 50%;
-  height: 30%;
-}
-
-#start-bottom {
-  background-color: #245edc;
-  height: 20%;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-
-#start-full {
-  display: none;
-  height: 300px;
-  width: 200px;
-  background-color: white;
-  flex-direction: column;
-  position: absolute;
-  bottom: 24px;
-}
 
 /* common classes */
 .row {
   display: flex;
   flex-direction: row;
 }
-
 .wrap {
   flex-wrap: wrap;
 }
-
 .column {
   display: flex;
   flex-direction: column;
   
 }
-.full-width, #start-bottom, #start-top, .top-menu  {
+.full-width  {
   width: 100%;
 }
-
 .resizer {
   width: 10px;
   height: 10px;
@@ -239,14 +113,7 @@ body {
   right: 0;
   cursor: se-resize;
 }
-
-
 .resizable {
   resize: both;
   overflow: auto;
-}
-
-/* clock classes */
-#clock {
-  color: black;
 }

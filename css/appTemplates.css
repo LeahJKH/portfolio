@@ -1,0 +1,60 @@
+#cv-full,
+#binary-full,
+#projects-full,
+#bin-full {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border: grey 3px solid;
+  top: 50px; 
+  left: 50px;
+  z-index: 10; 
+}
+#bin-full.draggable,
+#cv-full.draggable,
+#binary-full.draggable,
+#projects-full.draggable {
+  cursor: grab;
+  user-select: none;
+  position: absolute;
+}
+
+.closeX {
+    width: 25px;
+    height: 25px;
+    border: 2px white solid;
+    background-color: red;
+  }
+  
+  .closeX:active {
+    background-color: rgb(113, 16, 16);
+  }
+
+
+  /* top Window classes */
+.top-menu {
+    padding: 10px;
+    background-color: #1186e3;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab; 
+  }
+  
+  .top-menu-pic {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  
+  .top-btns-style {
+    width: 25px;
+    height: 25px;
+    border: 2px white solid;
+    background-color: #1186e3;
+    box-shadow: inset rgba(255, 255, 255, 0.343) 4px 4px 10px 2px;
+  }
+  
