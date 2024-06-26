@@ -2,7 +2,7 @@ import { setupBin, binClicked } from './apps/bin.js';
 import { setupProjects, ProjectsClicked } from './apps/projects.js';
 import { setupBinary, binaryClicked } from './apps/binary.js';
 import { setupCV, CvClicked } from './apps/cv.js';
-import { currentTime } from './SmallLogic/Clock.js';
+import { currentTime } from './SmallLogic/clock.js';
 
 currentTime();
 
