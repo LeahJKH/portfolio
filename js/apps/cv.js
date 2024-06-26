@@ -15,9 +15,7 @@ export function setupCV() {
     page.className = "resizable";
     page.style.display = "none";
   
-    const close = document.createElement("button");
-    close.id = "close-cv";
-    close.textContent = "X";
+   
     
 const columnDiv = document.createElement('div');
 columnDiv.className = 'column';
@@ -38,19 +36,24 @@ columnDiv.className = 'column';
   topMenuDiv.appendChild(topRowDiv);
 
   const buttonContainerDiv = document.createElement('div');
-    const minimizeButton = document.createElement('button');
-    minimizeButton.className = 'top-btns-style';
-    minimizeButton.textContent = '-';
+  const minimizeButton = document.createElement('button');
+  minimizeButton.className = 'top-btns-style';
+  minimizeButton.textContent = '-';
 
-    const maximizeButton = document.createElement('button');
-    maximizeButton.className = 'top-btns-style';
-    maximizeButton.textContent = '[]';
+  const maximizeButton = document.createElement('button');
+  maximizeButton.className = 'top-btns-style';
+  maximizeButton.textContent = '[]';
 
-    buttonContainerDiv.appendChild(minimizeButton);
-    buttonContainerDiv.appendChild(maximizeButton);
+  const close = document.createElement("button");
 
+  close.className = 'closeX';
+  close.textContent = "X";
+
+  buttonContainerDiv.appendChild(minimizeButton);
+  buttonContainerDiv.appendChild(maximizeButton);
+  buttonContainerDiv.appendChild(close);
   topMenuDiv.appendChild(buttonContainerDiv);
-columnDiv.appendChild(topMenuDiv);
+  columnDiv.appendChild(topMenuDiv);
 
   const secondRowDiv = document.createElement('div');
   secondRowDiv.className = 'row';
@@ -96,7 +99,7 @@ const resizerDiv = document.createElement('div');
 resizerDiv.className = 'resizer';
 columnDiv.appendChild(resizerDiv);
 page.appendChild(columnDiv);
-page.appendChild(close);
+
 document.body.appendChild(page);
   
     return { element, page, close };

@@ -15,9 +15,7 @@ export function setupBinary() {
   page.className = "resizable";
   page.style.display = "none";
 
-  const close = document.createElement("button");
-  close.id = "close-binary";
-  close.textContent = "X";
+
 
   const columnDiv = document.createElement('div');
   columnDiv.className = 'column';
@@ -44,17 +42,23 @@ export function setupBinary() {
   const minimizeButton = document.createElement('button');
   minimizeButton.className = 'top-btns-style';
   minimizeButton.textContent = '-';
-  
+
   const maximizeButton = document.createElement('button');
   maximizeButton.className = 'top-btns-style';
   maximizeButton.textContent = '[]';
-  
+
+  const close = document.createElement("button");
+
+  close.className = 'closeX';
+  close.textContent = "X";
+
   buttonContainerDiv.appendChild(minimizeButton);
   buttonContainerDiv.appendChild(maximizeButton);
-  
+  buttonContainerDiv.appendChild(close);
   topMenuDiv.appendChild(buttonContainerDiv);
-  
   columnDiv.appendChild(topMenuDiv);
+  
+
   
   const secondRowDiv = document.createElement('div');
   secondRowDiv.className = 'row';
@@ -80,7 +84,7 @@ export function setupBinary() {
   columnDiv.appendChild(resizerDiv);
   
   page.appendChild(columnDiv);
-  page.appendChild(close);
+
   document.body.appendChild(page);
 
   return { element, page, close };
