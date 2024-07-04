@@ -3,7 +3,7 @@ export function setupBin() {
   const element = document.createElement("div");
   element.classList.add("app");
   const img = document.createElement("img");
-  img.src = "./app-icons/bin.png";
+  img.src = "./appIcons/bin.png";
   img.setAttribute("bin-file", "ID");
 
   const p = document.createElement("p");
@@ -28,7 +28,7 @@ export function setupBin() {
   topRowDiv.className = 'row';
   const topImg = document.createElement('img');
   topImg.className = 'top-menu-pic';
-  topImg.src = "./app-icons/bin.png"
+  topImg.src = "./appIcons/bin.png"
   topRowDiv.appendChild(topImg);
 
   const topH4 = document.createElement('h4');
