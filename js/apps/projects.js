@@ -1,3 +1,4 @@
+import { projectsFiles } from "../SmallLogic/projectsFiles.js";
 export function setupProjects() {
   const element = document.createElement("div");
   element.classList.add("app");
@@ -5,7 +6,7 @@ export function setupProjects() {
   const p = document.createElement("p");
   const txt = document.createTextNode("Projects");
   p.appendChild(txt);
-  img.src = "./app-icons/folder.png";
+  img.src = "./appIcons/folder.png";
   img.setAttribute("projects-file", "ID");
   element.appendChild(img);
   element.appendChild(p);
@@ -26,7 +27,7 @@ export function setupProjects() {
   
       const topImg = document.createElement('img');
       topImg.className = 'top-menu-pic';
-      topImg.src = "./app-icons/projects.png"
+      topImg.src = "./appIcons/folder.png"
       topRowDiv.appendChild(topImg);
   
       const topH4 = document.createElement('h4');
@@ -58,7 +59,22 @@ export function setupProjects() {
     secondRowDiv.className = 'row';
   
     const textColumnDiv = document.createElement('div');
-    textColumnDiv.className = 'column';
+    textColumnDiv.className = 'row';
+
+      for (let i = 1; i <= 5; i++) {
+        const container = document.createElement("div")
+        container.className = "column"
+          const file = document.createElement("div")
+          const fileImg = document.createElement("img")
+          fileImg.src = "./appIcons/folder.png"
+          const p = document.createElement("p")
+          const text = document.createTextNode(`${projectsFiles[i].name}`)
+          p.append(text)
+          file.appendChild(fileImg)
+          file.appendChild(p)
+        container.appendChild(file)
+        textColumnDiv.appendChild(container)
+      }
 
     secondRowDiv.appendChild(textColumnDiv);
   
