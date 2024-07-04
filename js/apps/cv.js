@@ -5,7 +5,7 @@ export function setupCV() {
     const p = document.createElement("p");
     const txt = document.createTextNode("CV.docx");
     p.appendChild(txt);
-    img.src = "./app-icons/wordfile.png";
+    img.src = "./appIcons/wordfile.png";
     img.setAttribute("cv-file", "ID"); 
     element.appendChild(img);
     element.appendChild(p);
@@ -26,7 +26,7 @@ columnDiv.className = 'column full-width';
 
     const topImg = document.createElement('img');
     topImg.className = 'top-menu-pic';
-    topImg.src = "./app-icons/wordfile.png"
+    topImg.src = "./appIcons/wordfile.png"
     topRowDiv.appendChild(topImg);
 
     const topH4 = document.createElement('h4');

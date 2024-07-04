@@ -5,7 +5,7 @@ export function setupBinary() {
   const p = document.createElement("p");
   const txt = document.createTextNode("Binary.txt");
   p.appendChild(txt);
-  img.src = "./app-icons/notepad.png";
+  img.src = "./appIcons/notepad.png";
   img.setAttribute("binary-file", "ID");
   element.appendChild(img);
   element.appendChild(p);
@@ -27,7 +27,7 @@ export function setupBinary() {
   topRowDiv.className = 'row';
   
   const topImg = document.createElement('img');
-  topImg.src = './app-icons/notepad.png';
+  topImg.src = './appIcons/notepad.png';
   topImg.alt = '';
   topImg.className = 'top-menu-pic';
   topRowDiv.appendChild(topImg);
