@@ -55,8 +55,11 @@ columnDiv.className = 'column full-width';
   topMenuDiv.appendChild(buttonContainerDiv);
   columnDiv.appendChild(topMenuDiv);
 
+  const bgWord = document.createElement('div')
+  bgWord.className = 'bg-Word';
+
   const secondRowDiv = document.createElement('div');
-  secondRowDiv.className = 'row';
+  secondRowDiv.className = 'row document';
 
   const profileImg = document.createElement('img');
   profileImg.src = './images/pfp.jpg';
@@ -92,8 +95,8 @@ columnDiv.className = 'column full-width';
   textColumnDiv.appendChild(emailPara);
 
   secondRowDiv.appendChild(textColumnDiv);
-
-columnDiv.appendChild(secondRowDiv);
+bgWord.appendChild(secondRowDiv)
+columnDiv.appendChild(bgWord);
 
 const resizerDiv = document.createElement('div');
 resizerDiv.className = 'resizer';
