@@ -80,7 +80,7 @@ columnDiv.className = 'column full-width';
   textColumnDiv.appendChild(birthdatePara);
 
   const descriptionPara = document.createElement('p');
-  descriptionPara.textContent = 'jeg er en hyppig programerer og jeg elsker å snakke med folk. jeg har jobbet innen barn og ungdom men det er programering jeg brenner for';
+  descriptionPara.textContent = 'Jeg har en bakgrunn som barne- og ungdomsarbeider, men har senere skiftet fokus til programmering. For øyeblikket er jeg i praksis hos Jobloop, hvor jeg jobber med fullstack utvikling. Jeg har opparbeidet meg ferdigheter i flere programmeringsspråk og ulike rammeverk, som gjør meg i stand til å utvikle både frontend og backend applikasjoner. I min nåværende rolle har jeg arbeidet med ulike prosjekter som har gitt meg verdifull erfaring i å samarbeide med andre utviklere, forstå kravene fra brukere og levere kvalitetsløsninger innen tidsfrister. Jeg er motivert for å fortsette min karriere innen programvareutvikling og ser frem til nye utfordringer hvor jeg kan bidra med min kunnskap og lære enda mer.';
   textColumnDiv.appendChild(descriptionPara);
 
   const numberPara = document.createElement('p');
