@@ -62,7 +62,7 @@ columnDiv.className = 'column full-width';
   secondRowDiv.className = 'row document';
 
   const profileImg = document.createElement('img');
-  profileImg.src = './images/pfp.jpg';
+  profileImg.src = './images/LeahFace.webp';
   profileImg.alt = '';
   profileImg.id = 'cv-photo';
   secondRowDiv.appendChild(profileImg);
