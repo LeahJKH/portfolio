@@ -59,11 +59,11 @@ export function setupProjects() {
     secondRowDiv.className = 'row';
   
     const textColumnDiv = document.createElement('div');
-    textColumnDiv.className = 'row';
+    textColumnDiv.className = 'row wrap';
 
       for (let i = 1; i <= 11; i++) {
         const container = document.createElement("div")
-        container.className = "column"
+        container.classList.add = "column"
           const file = document.createElement("div")
           const fileImg = document.createElement("img")
           const fileLink = document.createElement("a")
