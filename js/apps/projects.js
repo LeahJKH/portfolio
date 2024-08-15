@@ -56,32 +56,30 @@ export function setupProjects() {
     columnDiv.appendChild(topMenuDiv);
   
     const secondRowDiv = document.createElement('div');
-    secondRowDiv.className = 'row';
+    secondRowDiv.className = 'grid-folder';
   
-    const textColumnDiv = document.createElement('div');
-    textColumnDiv.className = 'row wrap';
+    
 
       for (let i = 1; i <= 11; i++) {
-        const container = document.createElement("div")
-        container.classList.add = "column"
-          const file = document.createElement("div")
-          const fileImg = document.createElement("img")
+        
           const fileLink = document.createElement("a")
+          const fileImg = document.createElement("img")
           fileLink.href = `${projectsFiles[i].link}`
           fileLink.target = "_Blank"
-          fileLink.classList.add ("file-style-link")
+          fileLink.className = "file-style-link row center"
           fileImg.src = "./appIcons/folder.png"
+          fileImg.className = "folder-img"
           const p = document.createElement("p")
           const text = document.createTextNode(`${projectsFiles[i].name}`)
           p.append(text)
           fileLink.appendChild(fileImg)
           fileLink.appendChild(p)
-          file.appendChild(fileLink)
-        container.appendChild(file)
-        textColumnDiv.appendChild(container)
+         
+     
+        secondRowDiv.appendChild(fileLink)
       }
 
-    secondRowDiv.appendChild(textColumnDiv);
+  
   
   columnDiv.appendChild(secondRowDiv);
   
