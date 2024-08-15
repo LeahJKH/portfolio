@@ -1,5 +1,17 @@
 .file-style-link {
+    display: flex;
+    justify-content: flex-start;
     text-decoration: none;
     color: black;
     cursor: pointer;
+    
+    
+}
+.folder-img {
+    width: 50px;
+}
+.grid-folder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
 }
