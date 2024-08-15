@@ -104,6 +104,10 @@ body {
   flex-direction: column;
   
 }
+.center {
+  justify-content: center;
+  align-items: center;
+}
 .full-width  {
   width: 100%;
 }
