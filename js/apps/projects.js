@@ -66,12 +66,16 @@ export function setupProjects() {
         container.className = "column"
           const file = document.createElement("div")
           const fileImg = document.createElement("img")
+          const fileLink = document.createElement("a")
+          fileLink.href = `${projectsFiles[i].link}`
+          fileLink.target = "_Blank"
           fileImg.src = "./appIcons/folder.png"
           const p = document.createElement("p")
           const text = document.createTextNode(`${projectsFiles[i].name}`)
           p.append(text)
-          file.appendChild(fileImg)
-          file.appendChild(p)
+          fileLink.appendChild(fileImg)
+          fileLink.appendChild(p)
+          file.appendChild(fileLink)
         container.appendChild(file)
         textColumnDiv.appendChild(container)
       }
