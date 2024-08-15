@@ -1,7 +1,7 @@
 export let projectsFiles = {
     1: {
         name: "Per Clicker",
-        link: ""
+        link: "leahjkh.github.io/perclicker/"
     },
     2: {
         name: "MikuVite",
@@ -20,15 +20,27 @@ export let projectsFiles = {
         link: "keen-churros-447906.netlify.app/"
     },
     6: {
-        name: "",
-        link: ""
+        name: "show of css and html",
+        link: "leahjkh.github.io/show-of-css-and-html/"
     },
     7: {
-        name: "",
-        link: ""
+        name: "PyScraper",
+        link: "https://github.com/LeahJKH/pyScraper"
     },
     8: {
-        name: "",
-        link: ""
+        name: "MikuApi",
+        link: "https://github.com/LeahJKH/MikuApiGithub"
+    },
+    9: {
+        name: "Dungeon Crawler",
+        link:"leahjkh.github.io/dungeon-crawler/",
+    },
+    10: {
+        name: "MikuVite",
+        link:"mikuvite.netlify.app",
+    },
+    11: {
+        name: "Miku Blog",
+        link:"keen-churros-447906.netlify.app/",
     }
 }

@@ -61,7 +61,7 @@ export function setupProjects() {
     const textColumnDiv = document.createElement('div');
     textColumnDiv.className = 'row';
 
-      for (let i = 1; i <= 5; i++) {
+      for (let i = 1; i <= 11; i++) {
         const container = document.createElement("div")
         container.className = "column"
           const file = document.createElement("div")
@@ -69,6 +69,7 @@ export function setupProjects() {
           const fileLink = document.createElement("a")
           fileLink.href = `${projectsFiles[i].link}`
           fileLink.target = "_Blank"
+          fileLink.classList.add ("file-style-link")
           fileImg.src = "./appIcons/folder.png"
           const p = document.createElement("p")
           const text = document.createTextNode(`${projectsFiles[i].name}`)
