@@ -11,7 +11,7 @@ const cv = setupCV();
 const binary = setupBinary();
 const projects = setupProjects();
 const bin = setupBin();
-
+console.log(cv )
 // Append app elements to a container
 const appContainer = document.getElementById('app-container');
 

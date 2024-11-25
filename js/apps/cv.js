@@ -1,61 +1,10 @@
+import { topCreator } from "./templates/TopMenu.js";
 
 export function setupCV() {
+  const { columnDiv, closeButton } = topCreator("Cv.docx", "./appIcons/wordfile.png", "cv");
 
-  const element = document.createElement("div");
-  element.classList.add("app");
-  const img = document.createElement("img");
-  const p = document.createElement("p");
-  const txt = document.createTextNode("CV.docx");
-  p.appendChild(txt);
-  img.src = "./appIcons/wordfile.png";
-  img.setAttribute("cv-file", "ID"); 
-  element.appendChild(img);
-  element.appendChild(p);
+
   
-  const page = document.createElement("div");
-  page.id = "cv-full";
-  page.className = "resizable";
-  page.style.display = "none";
-  
-  
-  
-  const columnDiv = document.createElement('div');
-  columnDiv.className = 'column full-width';
-  const topMenuDiv = document.createElement('div');
-  topMenuDiv.className = 'top-menu draggable full-width';
-  const topRowDiv = document.createElement('div');
-  topRowDiv.className = 'row';
-  
-  const topImg = document.createElement('img');
-  topImg.className = 'top-menu-pic';
-  topImg.src = "./appIcons/wordfile.png"
-  topRowDiv.appendChild(topImg);
-  
-  const topH4 = document.createElement('h4');
-  topH4.textContent = 'CV';
-  topRowDiv.appendChild(topH4);
-  
-  topMenuDiv.appendChild(topRowDiv);
-  
-  const buttonContainerDiv = document.createElement('div');
-  const minimizeButton = document.createElement('button');
-  minimizeButton.className = 'top-btns-style';
-  minimizeButton.textContent = '-';
-  
-  const maximizeButton = document.createElement('button');
-  maximizeButton.className = 'top-btns-style';
-  maximizeButton.textContent = '[]';
-  
-  const close = document.createElement("button");
-  
-  close.className = 'closeX';
-  close.textContent = "X";
-  
-  buttonContainerDiv.appendChild(minimizeButton);
-  buttonContainerDiv.appendChild(maximizeButton);
-  buttonContainerDiv.appendChild(close);
-  topMenuDiv.appendChild(buttonContainerDiv);
-  columnDiv.appendChild(topMenuDiv);
   
   const bgWord = document.createElement('div')
   bgWord.className = 'bg-Word';
@@ -108,12 +57,29 @@ export function setupCV() {
           
           const resizerDiv = document.createElement('div');
           resizerDiv.className = 'resizer';
+
+          const element = document.createElement("div");
+          element.classList.add("app");
+      
+          const img = document.createElement("img");
+          const p = document.createElement("p");
+          const txt = document.createTextNode(`cv.docx`);
+      
+          p.appendChild(txt);
+          img.src = "./appIcons/wordfile.png";
+          img.setAttribute("cv-file", "ID");
+          element.appendChild(img);
+          element.appendChild(p);
+
           columnDiv.appendChild(resizerDiv);
-          page.appendChild(columnDiv);
+          const page = document.createElement('div');
+  page.id = 'cv-full';  
+  page.appendChild(columnDiv);
           
           document.body.appendChild(page);
           
-          return { element, page, close };
+          return { element, page, close: closeButton };
+       
         }
         
         export function CvClicked() {
