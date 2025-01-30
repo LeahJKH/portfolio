@@ -3,6 +3,7 @@ import { setupProjects, ProjectsClicked } from './apps/projects.js';
 import { setupBinary, binaryClicked } from './apps/binary.js';
 import { setupCV, CvClicked } from './apps/cv.js';
 import { currentTime } from './SmallLogic/clock.js';
+import { makeDraggable, makeResizable } from './apps/templates/DragRezise.js';
 
 currentTime();
 
@@ -11,7 +12,9 @@ const cv = setupCV();
 const binary = setupBinary();
 const projects = setupProjects();
 const bin = setupBin();
-console.log(cv )
+
+console.log(cv);
+
 // Append app elements to a container
 const appContainer = document.getElementById('app-container');
 
@@ -36,11 +39,26 @@ function handleClick(app, clickHandler) {
         app.page.style.display = "flex";
         clickHandler();
     });
+
     app.close.addEventListener("click", () => {
         app.page.style.display = "none";
     });
+
+    makeDraggable(app.page); // Enable dragging
+    makeResizable(app.page); // Enable resizing
 }
+
 handleClick(cv, CvClicked);
 handleClick(binary, binaryClicked);
 handleClick(projects, ProjectsClicked);
 handleClick(bin, binClicked);
+
+// Start button logic
+const startBtn = document.querySelector("#start-btn");
+const startFull = document.querySelector("#start-full");
+let menuIsOpen = true;
+
+startBtn.addEventListener("click", function () {
+    menuIsOpen = !menuIsOpen;
+    startFull.style.display = menuIsOpen ? "flex" : "none";
+});
