@@ -5,8 +5,8 @@ export function setupBinary() {
     const { columnDiv, closeButton } = topCreator("binary.txt", "./appIcons/notepad.png", "Binary");
 
   
-    const secondRowDiv = document.createElement('div');
-    secondRowDiv.className = 'row';
+    const mainContent = document.createElement('div');
+    mainContent.className = 'row';
 
     const binaryPara = document.createElement('p');
     binaryPara.id = 'binary-code';
@@ -20,9 +20,9 @@ export function setupBinary() {
         01101111 01101100 01110101 01100011 01101011 00100001
     `;
 
-    secondRowDiv.appendChild(binaryPara);
+    mainContent.appendChild(binaryPara);
    
-    columnDiv.appendChild(secondRowDiv);
+    columnDiv.appendChild(mainContent);
 
    
     const resizerDiv = document.createElement('div');

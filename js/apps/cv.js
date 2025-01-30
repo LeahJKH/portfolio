@@ -9,8 +9,8 @@ export function setupCV() {
   const bgWord = document.createElement('div')
   bgWord.className = 'bg-Word';
   
-  const secondRowDiv = document.createElement('div');
-  secondRowDiv.className = 'row document';
+  const mainContent = document.createElement('div');
+  mainContent.className = 'row document';
   
   const profileImg = document.createElement('img');
   const textColumnDiv = document.createElement('div');
@@ -27,7 +27,7 @@ export function setupCV() {
   profileImg.src = './images/LeahFace.webp';
   profileImg.alt = '';
   profileImg.id = 'cv-photo';
-  secondRowDiv.appendChild(profileImg);
+  mainContent.appendChild(profileImg);
   
   textColumnDiv.className = 'column';
   
@@ -51,8 +51,8 @@ export function setupCV() {
         })
         .catch(error => console.error('Error loading JSON:', error));
           
-          secondRowDiv.appendChild(textColumnDiv);
-          bgWord.appendChild(secondRowDiv)
+          mainContent.appendChild(textColumnDiv);
+          bgWord.appendChild(mainContent)
           columnDiv.appendChild(bgWord);
           
           const resizerDiv = document.createElement('div');

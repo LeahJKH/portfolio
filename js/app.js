@@ -13,20 +13,24 @@ const binary = setupBinary();
 const projects = setupProjects();
 const bin = setupBin();
 
-console.log(cv);
+
 
 // Append app elements to a container
 const appContainer = document.getElementById('app-container');
 
+// the app icons
 appContainer.appendChild(cv.element);
 appContainer.appendChild(binary.element);
 appContainer.appendChild(projects.element);
 appContainer.appendChild(bin.element);
+// the app icons
 
+// the actual page
 appContainer.appendChild(cv.page);
 appContainer.appendChild(binary.page);
 appContainer.appendChild(projects.page);
 appContainer.appendChild(bin.page);
+// the actual page
 
 // Add event listeners and handlers
 function handleClick(app, clickHandler) {
@@ -44,8 +48,8 @@ function handleClick(app, clickHandler) {
         app.page.style.display = "none";
     });
 
-    makeDraggable(app.page); // Enable dragging
-    makeResizable(app.page); // Enable resizing
+        makeDraggable(app.page); // Enable dragging
+        makeResizable(app.page); // Enable resizing
 }
 
 handleClick(cv, CvClicked);

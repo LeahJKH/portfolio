@@ -21,3 +21,4 @@ export function currentTime() {
     document.querySelector("#clock").textContent = time;
     setTimeout(currentTime, 1000);
   }
+  // TODO: Decide if 24hour or am/pm

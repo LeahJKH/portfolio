@@ -4,3 +4,4 @@ even though it should seem like a windows machine it should be about me.
 maybe ill add some easter eggs
 ## why?
 i grew up on windows XP and it is what started my obsession with tech. 
+

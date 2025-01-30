@@ -2,10 +2,13 @@ import { projectsFiles } from "../SmallLogic/projectsFiles.js";
 import { topCreator } from "./templates/TopMenu.js";
 
 export function setupProjects() {
+  //top part of page
   const { columnDiv, closeButton } = topCreator("Projects", "./appIcons/folder.png", "Folder");
+  //top part of page
 
-    const secondRowDiv = document.createElement('div');
-    secondRowDiv.className = 'grid-folder';
+
+    const mainContent = document.createElement('div');
+    mainContent.className = 'grid-folder';
   
       for (let i = 1; i <= 11; i++) {
         
@@ -23,12 +26,12 @@ export function setupProjects() {
           fileLink.appendChild(p)
          
      
-        secondRowDiv.appendChild(fileLink)
+        mainContent.appendChild(fileLink)
       }
 
   
   
-  columnDiv.appendChild(secondRowDiv);
+  columnDiv.appendChild(mainContent);
   
   const resizerDiv = document.createElement('div');
   resizerDiv.className = 'resizer';
@@ -47,6 +50,7 @@ export function setupProjects() {
 
   const page = document.createElement('div');
   page.id = 'projects-full';  
+  columnDiv.appendChild(resizerDiv);
   page.appendChild(columnDiv);
   document.body.appendChild(page);
  

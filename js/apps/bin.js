@@ -7,14 +7,14 @@ export function setupBin() {
     
   
   
-  const secondRowDiv = document.createElement('div');
-  secondRowDiv.className = 'row';
+  const mainContent = document.createElement('div');
+  mainContent.className = 'row';
   
   const textColumnDiv = document.createElement('div');
   textColumnDiv.className = 'column';
   
-  secondRowDiv.appendChild(textColumnDiv);
-  columnDiv.appendChild(secondRowDiv);
+  mainContent.appendChild(textColumnDiv);
+  columnDiv.appendChild(mainContent);
   
   const resizerDiv = document.createElement('div');
   resizerDiv.className = 'resizer';
