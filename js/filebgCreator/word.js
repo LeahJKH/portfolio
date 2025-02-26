@@ -35,12 +35,17 @@ bar2.id = "bar2Specs"
 for(let i = 0; i <= 15; i++) {
     if(i !== 14) {
 
-        // const iconNames = ["paper", "open-folder"]
+        const iconNames = ["paper", "open-folder", "floppydisk", "letter"]
         
         const icon = document.createElement("img")
+        if (i <= 3) {
+
+        icon.src = `./appIcons/${iconNames[i]}.svg`
+        } else {
         icon.src = "./appIcons/paper.svg"
-        // icon.src = `./appIcons/${iconNames[i]}.svg`
-        icon.id = `icon${i}`
+
+        }
+            icon.id = `icon${i}`
         icon.classList.add("icons")
         icon.classList.add("clickable")
         bar2.appendChild(icon)
@@ -69,7 +74,7 @@ return container;
         //bar 1.2
             //split into 6 parts
                 //part 1
-                    //icon of paper(V), icon of open folder, icon of a floppydisk, icon of a letter
+                    //icon of paper(V), icon of open folder (V), icon of a floppydisk (V), icon of a letter(V)
                 //part 2
                     // icon of a printer, icon of a paper with magnifying glass, icon of a checkmark and abc
                 //part 3
