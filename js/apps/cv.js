@@ -1,5 +1,5 @@
 import { topCreator } from "./templates/TopMenu.js";
-
+import wordContent from "../filebgCreator/word.js";
 export function setupCV() {
   const { columnDiv, closeButton } = topCreator("Cv.docx", "./appIcons/wordfile.png", "cv");
 
@@ -75,7 +75,7 @@ export function setupCV() {
           const page = document.createElement('div');
   page.id = 'cv-full';  
   page.appendChild(columnDiv);
-          
+          page.appendChild(wordContent())
           document.body.appendChild(page);
           
           return { element, page, close: closeButton };
