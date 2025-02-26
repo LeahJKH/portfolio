@@ -1,10 +1,38 @@
 
 .container {
     background-color: #ece9d8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px, 5px, 50px, 5px, 50px;
 }
 .clickable {
     cursor: pointer;
 }
 .blacktxt {
     color: #000;
+}
+.bar {
+display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: flex-start;
+align-items: center;
+}
+.icons {
+    width: 40px;
+}
+#bar1Specs {
+    grid-row: 1 / 2;
+}
+#line1 {
+    grid-row: 2 / 3;
+
+}
+#line2 {
+    grid-row: 4 / 5;
+    
+}
+#bar2Specs {
+    grid-row: 3 / 4;
+
 }
