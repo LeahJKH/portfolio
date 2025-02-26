@@ -1,6 +1,3 @@
-// plans
-// a container with the color #ece9d8
-
 //three bars one for buttons one for the content and one for bottom menu
 
 
@@ -10,6 +7,8 @@ export default function wordContent () {
     container.className = "container"
     
     const bar1 = document.createElement("section");
+    bar1.classList.add("bar")
+bar1.id = "bar1Specs"
     
     const bar1MenuItems = ["File", "Edit", "View", "Insert", "Format", "Tools", "Table", "Window", "Help"];
     
@@ -25,12 +24,25 @@ export default function wordContent () {
     bar1.innerHTML += `<p id="item${index}" class="blacktxt">${underlinedText}</p>`;
 });
 container.appendChild(bar1)
+
+const line = document.createElement("hr")
+line.id = "line1"
+container.appendChild(line)
+
 const bar2 = document.createElement("section")
+bar2.classList.add("bar")
+bar2.id = "bar2Specs"
 for(let i = 0; i <= 15; i++) {
     if(i !== 14) {
 
+        // const iconNames = ["paper", "open-folder"]
+        
         const icon = document.createElement("img")
         icon.src = "./appIcons/paper.svg"
+        // icon.src = `./appIcons/${iconNames[i]}.svg`
+        icon.id = `icon${i}`
+        icon.classList.add("icons")
+        icon.classList.add("clickable")
         bar2.appendChild(icon)
     }
     else {
@@ -45,18 +57,19 @@ for(let i = 0; i <= 15; i++) {
         bar2.appendChild(sizeDropDown)
     }
 }
+
+const line2 = document.createElement("hr")
+line2.id = "line2"
+
 container.appendChild(bar2)
+container.appendChild(line2)
 return container;
 }
-// bar 1
-    // three more bars
-        // bar 1.1 
-            //containe File, Edit, Veiw, Insert, Format, Tools, Table, Window, Help
-            //first letter should have an under line and text color should be #000
+
         //bar 1.2
             //split into 6 parts
                 //part 1
-                    //icon of paper, icon of open folder, icon of a floppydisk, icon of a letter
+                    //icon of paper(V), icon of open folder, icon of a floppydisk, icon of a letter
                 //part 2
                     // icon of a printer, icon of a paper with magnifying glass, icon of a checkmark and abc
                 //part 3
