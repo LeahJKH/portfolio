@@ -4,6 +4,50 @@
 //three bars one for buttons one for the content and one for bottom menu
 
 
+export default function wordContent () {
+
+    const container = document.createElement("div");
+    container.className = "container"
+    
+    const bar1 = document.createElement("section");
+    
+    const bar1MenuItems = ["File", "Edit", "View", "Insert", "Format", "Tools", "Table", "Window", "Help"];
+    
+    bar1MenuItems.forEach((Item, index) => {
+    let underlinedText;
+
+    if (Item === "Format" || Item === "Table") {
+        underlinedText = `${Item[0]}<u>${Item[1]}</u>${Item.slice(2)}`;
+    } else {
+        underlinedText = `<u>${Item[0]}</u>${Item.slice(1)}`;
+    }
+    
+    bar1.innerHTML += `<p id="item${index}" class="blacktxt">${underlinedText}</p>`;
+});
+container.appendChild(bar1)
+const bar2 = document.createElement("section")
+for(let i = 0; i <= 15; i++) {
+    if(i !== 14) {
+
+        const icon = document.createElement("img")
+        icon.src = "./appIcons/paper.svg"
+        bar2.appendChild(icon)
+    }
+    else {
+        const sizeDropDown = document.createElement("select")
+        for(let i = 0; i < 10; i++) {
+            const size = document.createElement("option");
+            size.value = (i + 1) * 10
+            let sizetxt = document.createTextNode(`${(i + 1) * 10}%`)
+            size.append(sizetxt)
+            sizeDropDown.appendChild(size)
+        }
+        bar2.appendChild(sizeDropDown)
+    }
+}
+container.appendChild(bar2)
+return container;
+}
 // bar 1
     // three more bars
         // bar 1.1 
