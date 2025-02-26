@@ -1,0 +1,10 @@
+
+.container {
+    background-color: #ece9d8;
+}
+.clickable {
+    cursor: pointer;
+}
+.blacktxt {
+    color: #000;
+}
