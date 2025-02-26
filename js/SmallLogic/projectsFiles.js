@@ -1,11 +1,11 @@
 export let projectsFiles = {
     1: {
         name: "Per Clicker",
-        link: "leahjkh.github.io/perclicker/"
+        link: "https://leahjkh.github.io/perclicker/"
     },
     2: {
         name: "MikuVite",
-        link: "mikuvite.netlify.app"
+        link: "https://mikuvite.netlify.app"
     },
     3: {
         name: "Meows",
@@ -17,11 +17,11 @@ export let projectsFiles = {
     },
     5: {
         name: "Miku Blog",
-        link: "keen-churros-447906.netlify.app/"
+        link: "https://keen-churros-447906.netlify.app/"
     },
     6: {
         name: "show of css and html",
-        link: "leahjkh.github.io/show-of-css-and-html/"
+        link: "https://leahjkh.github.io/show-of-css-and-html/"
     },
     7: {
         name: "PyScraper",
@@ -33,15 +33,15 @@ export let projectsFiles = {
     },
     9: {
         name: "Dungeon Crawler",
-        link:"leahjkh.github.io/dungeon-crawler/",
+        link:"https://leahjkh.github.io/dungeon-crawler/",
     },
     10: {
         name: "MikuVite",
-        link:"mikuvite.netlify.app",
+        link:"https://mikuvite.netlify.app",
     },
     11: {
         name: "Miku Blog",
-        link:"keen-churros-447906.netlify.app/",
+        link:"https://keen-churros-447906.netlify.app/",
     }
 }
 // TODO: ADD MORE PROJECTS
