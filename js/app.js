@@ -4,7 +4,7 @@ import { setupBinary, binaryClicked } from './apps/binary.js';
 import { setupCV, CvClicked } from './apps/cv.js';
 import { currentTime } from './SmallLogic/clock.js';
 import { makeDraggable, makeResizable } from './apps/templates/DragRezise.js';
-
+import { bottomLogic } from './SmallLogic/bottomNav.js';
 currentTime();
 
 // Initialize app objects
@@ -33,7 +33,7 @@ appContainer.appendChild(bin.page);
 // the actual page
 
 // Add event listeners and handlers
-function handleClick(app, clickHandler) {
+function handleClick(app, clickHandler, activatebot) {
     if (!app.element || !app.page || !app.close) {
         console.error('App object is missing required properties:', app);
         return;
@@ -42,20 +42,22 @@ function handleClick(app, clickHandler) {
     app.element.addEventListener("click", () => {
         app.page.style.display = "flex";
         clickHandler();
+        bottomLogic(activatebot)
     });
 
     app.close.addEventListener("click", () => {
         app.page.style.display = "none";
+        bottomLogic(activatebot, "close")
     });
-
+        
         makeDraggable(app.page); // Enable dragging
         makeResizable(app.page); // Enable resizing
 }
 
-handleClick(cv, CvClicked);
-handleClick(binary, binaryClicked);
-handleClick(projects, ProjectsClicked);
-handleClick(bin, binClicked);
+handleClick(cv, CvClicked, "showCv");
+handleClick(binary, binaryClicked, "showBinary" );
+handleClick(projects, ProjectsClicked, "showProjects");
+handleClick(bin, binClicked, "showTrash");
 
 // Start button logic
 const startBtn = document.querySelector("#start-btn");
