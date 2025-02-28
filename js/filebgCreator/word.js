@@ -69,6 +69,27 @@ line2.id = "line2"
 container.appendChild(bar2)
 container.appendChild(line2)
 
+
+const smallbgmainWord = document.createElement("section")
+smallbgmainWord.id = "small-bg-main-Word"
+smallbgmainWord.style.backgroundColor = "#ACA899"
+const sideMenuTop = document.createElement("section");
+sideMenuTop.id = "side-menu-top"
+sideMenuTop.style.backgroundColor ="#ECE9D8"
+sideMenuTop.style.border = "1px solid #716F64"
+smallbgmainWord.appendChild(sideMenuTop)
+const fakebgdoc = document.createElement("div")
+fakebgdoc.id = "fake-bg-doc"
+fakebgdoc.style.backgroundColor = "#ACA899"
+sideMenuTop.appendChild(fakebgdoc)
+const mainDoc = document.createElement("div")
+mainDoc.id = "main-doc"
+mainDoc.style.backgroundColor ="#fff"
+mainDoc.style.border ="1px solid #000"
+mainDoc.appendChild(fakebgdoc)
+
+container.appendChild(smallbgmainWord)
+
  
 return container;
 }
