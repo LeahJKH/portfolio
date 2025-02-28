@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 50px, 5px, 50px, 5px, 1fr, 1fr, 1fr;
+    height: 100%;
+    width: 100%;
 }
 .clickable {
     cursor: pointer;
@@ -61,4 +63,5 @@ align-items: center;
     border: 1px solid #000;
     width: 95%;
     height: fit-content;
+    user-select:text;
 }
