@@ -1,3 +1,7 @@
+@font-face {
+  font-family: ThaomaXP;
+  src: url(../Fonts/windows-xp-tahoma.otf);
+}
 /* clock classes */
 #clock {
     color: black;
@@ -5,15 +9,29 @@
   }
 
   #start-btn {
-    display: flex;
-    background-color: #1dc824;
-    width: 11%;
-    height: 100%;
-    border-radius: 0 10px 10px 0;
+
+    background: rgb(12,52,11);
+    background: linear-gradient(155deg, rgba(12,52,11,1) 0%, rgba(19,82,18,1) 8%, rgba(23,103,23,1) 25%, rgba(35,154,34,1) 100%);    height: 100%;
+    border-radius: 0 13px 13px 0;
+    width: 15.5%;
+    max-width: 180px;
     cursor: pointer;
-    align-items: center;
-    justify-content: center;
+    font-family:  thaoma, sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
     color: white;
+    border-image: linear-gradient(322deg, rgba(30,126,30,1) 0%, rgba(8,39,8,1) 100%);
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 2px 7px;
+  }
+  #Win-start-btn {
+    height: 90%;
   }
   
   #start-top {
@@ -46,7 +64,7 @@
   
   #start-bottom {
     background-color: #245edc;
-    height: 20%;
+    height: 19px;
     display: flex;
     justify-content: right;
     align-items: center;
