@@ -1,3 +1,10 @@
+@import url("screenItems.css");
+@import url("appTemplates.css");
+@import url("bottomMenu.css");
+@import url("appSpecific/cv.css");
+@import url("appSpecific/Projects.css");
+@import url("./fileSetup/wordfile.css");
+
 * {
   margin: 0;
   padding: 0;
