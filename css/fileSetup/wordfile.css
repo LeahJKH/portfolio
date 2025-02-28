@@ -40,7 +40,7 @@ align-items: center;
 
 #small-bg-main-Word {
     width: 98%;
-    grid-row: 4/7;
+    grid-row: 5/7;
     grid-column: 1/2;
     background-Color: #ACA899;
 }
