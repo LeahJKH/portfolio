@@ -1,5 +1,6 @@
 //three bars one for buttons one for the content and one for bottom menu
 
+import { docWord } from "./documentWord.js";
 
 export default function wordContent () {
 
@@ -72,22 +73,18 @@ container.appendChild(line2)
 
 const smallbgmainWord = document.createElement("section")
 smallbgmainWord.id = "small-bg-main-Word"
-smallbgmainWord.style.backgroundColor = "#ACA899"
 const sideMenuTop = document.createElement("section");
 sideMenuTop.id = "side-menu-top"
-sideMenuTop.style.backgroundColor ="#ECE9D8"
-sideMenuTop.style.border = "1px solid #716F64"
-smallbgmainWord.appendChild(sideMenuTop)
 const fakebgdoc = document.createElement("div")
 fakebgdoc.id = "fake-bg-doc"
-fakebgdoc.style.backgroundColor = "#ACA899"
-sideMenuTop.appendChild(fakebgdoc)
 const mainDoc = document.createElement("div")
 mainDoc.id = "main-doc"
-mainDoc.style.backgroundColor ="#fff"
-mainDoc.style.border ="1px solid #000"
-mainDoc.appendChild(fakebgdoc)
 
+const cvdoc = docWord()
+mainDoc.appendChild(cvdoc)
+fakebgdoc.appendChild(mainDoc)
+sideMenuTop.appendChild(fakebgdoc)
+smallbgmainWord.appendChild(sideMenuTop)
 container.appendChild(smallbgmainWord)
 
  
