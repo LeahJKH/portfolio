@@ -68,6 +68,8 @@ line2.id = "line2"
 
 container.appendChild(bar2)
 container.appendChild(line2)
+
+ 
 return container;
 }
 
@@ -84,7 +86,7 @@ return container;
                 // part 5
                     // icon of a globe with chain, icon of a tabell
                 // part 6
-                    // icon dropdown menu with % and a help icon
+                    // icon dropdown menu with %(?) and a help icon
         // bar 1.3
             // split in five parts
                 // part 1 
