@@ -36,10 +36,13 @@
   
   #start-top {
     background-color: #245edc;
-    height: 30%;
+    height: 14%;
     display: flex;
     justify-content: left;
     align-items: center;
+    padding: 0 17px;
+    gap: 9px;
+    color: #fff;
   }
   
   #left-side-menu {
@@ -53,18 +56,21 @@
   }
   
   #right-side-menu {
-    background-color: rgb(170, 170, 170);
+    background-color: #D3E5FB;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     width: 50%;
-    height: 30%;
+    height: 100%;
+  }
+  #middle-start-menu {
+    height:85%;
   }
   
   #start-bottom {
     background-color: #245edc;
-    height: 19px;
+    height: 9%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -72,10 +78,21 @@
   
   #start-full {
     display: none;
-    height: 300px;
-    width: 200px;
+    height: 75%;
+    width: 28%;
+    min-width: 400px;
+    max-width: 500px;
     background-color: white;
     flex-direction: column;
     position: absolute;
     bottom: 24px;
+  }
+
+  #Pfp-start {
+    width: 13%;
+    height: 70%;
+    border: 1px solid #BDD9F3;
+    background-color: #BDD9F3;
+    border-radius: 10px;
+    border-image: fill;
   }
