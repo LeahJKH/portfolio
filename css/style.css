@@ -4,9 +4,19 @@
 @import url("appSpecific/cv.css");
 @import url("appSpecific/Projects.css");
 @import url("./fileSetup/wordfile.css");
-@import url("./topmenu.css");
-@import url("./appSpecific/binary.css");
-@import url("./appSpecific/binary.css");
+@import url("/topmenu.css");
+@import url("/appSpecific/binary.css");
+@import url("/appSpecific/binary.css");
+
+@import url("./css/screenItems.css");
+@import url("./css/appTemplates.css");
+@import url("./css/bottomMenu.css");
+@import url("./css/appSpecific/cv.css");
+@import url("./cssappSpecific/Projects.css");
+@import url("./css/fileSetup/wordfile.css");
+@import url("./css/topmenu.css");
+@import url("./css/appSpecific/binary.css");
+@import url("./css/appSpecific/binary.css");
 
 * {
   margin: 0;
