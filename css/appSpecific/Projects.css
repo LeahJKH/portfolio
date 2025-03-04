@@ -1,17 +1,24 @@
+#projects-full {
+  min-width: 400px;
+  height: 300px;
+}
 .file-style-link {
-    display: flex;
-    justify-content: flex-start;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    
-    
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 .folder-img {
-    width: 50px;
+  width: 50px;
 }
 .grid-folder {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: auto;
+}
+
+.Files-system {
+  min-width: 100px;
+  margin: 5px;
 }
