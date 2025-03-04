@@ -2,7 +2,7 @@ import { topCreator } from "./templates/TopMenu.js";
 import wordContent from "../filebgCreator/word.js";
 
 export function setupCV() {
-  const { columnDiv, closeButton } = topCreator("Cv.docx", "./appIcons/wordfile.png", "cv");
+  const { columnDiv, closeButton } = topCreator("Cv.docx", "./appIcons/wordfile.svg", "cv");
 
   
   
@@ -17,7 +17,7 @@ export function setupCV() {
   const txt = document.createTextNode(`cv.docx`);
   
   p.appendChild(txt);
-  img.src = "./appIcons/wordfile.png";
+  img.src = "./appIcons/wordfile.svg";
   img.setAttribute("cv-file", "ID");
   element.appendChild(img);
   element.appendChild(p);

@@ -96,3 +96,20 @@
     border-radius: 10px;
     border-image: fill;
   }
+
+  .mainBottomBtn {
+    background-color: #3A80F3;
+    height: 98%;
+    width: 45%;
+    min-width: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 10px;
+  }
+  #middle-stuff {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
+  }
