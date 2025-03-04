@@ -1,7 +1,14 @@
+#cv-full {
+  width: 670px;
+  height: 475px;
+}
+
+#cv-photo {
+  width: 250px;
+  height: 250px;
+}
 
 .document {
-    background-color: #fff;
-    margin: 10px;
-    }
-
-   
+  background-color: #fff;
+  margin: 10px;
+}
